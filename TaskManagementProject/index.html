@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Task Manager</h1>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Task Name" />
+      <input type="datetime-local" id="reminderInput" />
+
+      <select id="taskTypeInput">
+        <option value="daily">Daily Task</option>
+        <option value="weekly">One-Week Task</option>
+      </select>
+
+      <button id="addTaskButton">Add Task</button>
+    </div>
+
+    <!--Task List-->
+
+    <div class="task-lists">
+      <div class="task-box active--box">
+        <h2>Active Tasks</h2>
+        <ul id="dailyTasks"></ul>
+        <ul id="weeklyTasks"></ul>
+      </div>
+
+      <div class="task-box ongoing-box">
+        <h2>Ongoing Tasks</h2>
+        <ul id="ongoingTasks"></ul>
+      </div>
+
+      <div class="task-box completed-box">
+        <h2>Completed Tasks</h2>
+        <ul id="completedTasks"></ul>
+      </div>
+    </div>
+
+    <!--Motivation Box-->
+    <div id="motivationBox" class="motivation-box" style="display: none">
+      <p id="motivationText"></p>
+
+      <button id="closeMotivationButton">Close</button>
+    </div>
+
+    <!-- Reminder Display -->
+     <p id="reminderDisplay"></p>
+</html>
